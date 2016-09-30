@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1630BAF41D95ADEF000ABA93 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BAF31D95ADEF000ABA93 /* FeedViewController.swift */; };
+		1630BAF61D95AED1000ABA93 /* AttendanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BAF51D95AED1000ABA93 /* AttendanceCell.swift */; };
+		1630BAF81D95C43D000ABA93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BAF71D95C43D000ABA93 /* MapViewController.swift */; };
+		1630BAFA1D95DE34000ABA93 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1630BAF91D95DE34000ABA93 /* FBSDKShareKit.framework */; };
+		1630BAFC1D95DE40000ABA93 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1630BAFB1D95DE40000ABA93 /* FBSDKLoginKit.framework */; };
+		1630BAFE1D95DE49000ABA93 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1630BAFD1D95DE49000ABA93 /* FBSDKCoreKit.framework */; };
+		1630BB021D9603C9000ABA93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB011D9603C9000ABA93 /* User.swift */; };
+		1630BB041D9610D3000ABA93 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB031D9610D3000ABA93 /* SettingsViewController.swift */; };
+		1630BB061D961307000ABA93 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB051D961307000ABA93 /* CreateEventVC.swift */; };
+		1651C0B41D981F6A003D578D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651C0B31D981F6A003D578D /* SignInVC.swift */; };
+		1651C0B61D9827D6003D578D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651C0B51D9827D6003D578D /* SignUpVC.swift */; };
+		166F5F171D9DA57D00B462E5 /* EventMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */; };
+		166F5F191D9DA8FD00B462E5 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F5F181D9DA8FD00B462E5 /* CustomInfoWindow.swift */; };
+		166F5F1B1D9DAF7D00B462E5 /* CustomMarkerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F5F1A1D9DAF7D00B462E5 /* CustomMarkerData.swift */; };
+		16BC6B4A1D9774B600BDD535 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC6B491D9774B600BDD535 /* DatePickerVC.swift */; };
+		16BC6B4C1D979A2F00BDD535 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC6B4B1D979A2F00BDD535 /* EventCell.swift */; };
+		16BC6B4E1D979CB400BDD535 /* EventFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC6B4D1D979CB400BDD535 /* EventFeedVC.swift */; };
+		16BC6B501D97A93600BDD535 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC6B4F1D97A93600BDD535 /* File.swift */; };
+		16BCD46E1D9C1D1900EC0D3E /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCD46D1D9C1D1900EC0D3E /* EventDetailVC.swift */; };
 		16C201491D94AD6D00B9E48B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C201481D94AD6D00B9E48B /* AppDelegate.swift */; };
 		16C2014B1D94AD6D00B9E48B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C2014A1D94AD6D00B9E48B /* ViewController.swift */; };
 		16C2014E1D94AD6D00B9E48B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C2014C1D94AD6D00B9E48B /* Main.storyboard */; };
@@ -14,6 +33,11 @@
 		16C201531D94AD6D00B9E48B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C201511D94AD6D00B9E48B /* LaunchScreen.storyboard */; };
 		16C2015E1D94AD6D00B9E48B /* PinrPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C2015D1D94AD6D00B9E48B /* PinrPrototypeTests.swift */; };
 		16C201691D94AD6D00B9E48B /* PinrPrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C201681D94AD6D00B9E48B /* PinrPrototypeUITests.swift */; };
+		16E92C831D963DDB0070811B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E92C821D963DDB0070811B /* Event.swift */; };
+		16E92C851D96F5EF0070811B /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E92C841D96F5EF0070811B /* Attendance.swift */; };
+		222071BCEA96064DE2B1935D /* Pods_PinrPrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79F90742CF0FE37254A8C8F /* Pods_PinrPrototypeUITests.framework */; };
+		3D65C6F03029430FF26F4FF0 /* Pods_PinrPrototypeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E63D61C1254B9420AFDD6FA /* Pods_PinrPrototypeTests.framework */; };
+		8B219588B1524FA030DAF189 /* Pods_PinrPrototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D38D0D674EF85A4C530EABF /* Pods_PinrPrototype.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +58,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1630BAF31D95ADEF000ABA93 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1630BAF51D95AED1000ABA93 /* AttendanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceCell.swift; sourceTree = "<group>"; };
+		1630BAF71D95C43D000ABA93 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1630BAF91D95DE34000ABA93 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		1630BAFB1D95DE40000ABA93 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		1630BAFD1D95DE49000ABA93 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1630BAFF1D95F9BB000ABA93 /* PinrPrototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinrPrototype.entitlements; sourceTree = "<group>"; };
+		1630BB011D9603C9000ABA93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1630BB031D9610D3000ABA93 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1630BB051D961307000ABA93 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		1651C0B31D981F6A003D578D /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		1651C0B51D9827D6003D578D /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventMarkerView.xib; sourceTree = "<group>"; };
+		166F5F181D9DA8FD00B462E5 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
+		166F5F1A1D9DAF7D00B462E5 /* CustomMarkerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMarkerData.swift; sourceTree = "<group>"; };
+		16BC6B491D9774B600BDD535 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		16BC6B4B1D979A2F00BDD535 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		16BC6B4D1D979CB400BDD535 /* EventFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFeedVC.swift; sourceTree = "<group>"; };
+		16BC6B4F1D97A93600BDD535 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		16BCD46D1D9C1D1900EC0D3E /* EventDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailVC.swift; sourceTree = "<group>"; };
 		16C201451D94AD6D00B9E48B /* PinrPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinrPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C201481D94AD6D00B9E48B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16C2014A1D94AD6D00B9E48B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +91,17 @@
 		16C201641D94AD6D00B9E48B /* PinrPrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinrPrototypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C201681D94AD6D00B9E48B /* PinrPrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinrPrototypeUITests.swift; sourceTree = "<group>"; };
 		16C2016A1D94AD6D00B9E48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16E92C821D963DDB0070811B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		16E92C841D96F5EF0070811B /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		27CE9FDAA0A93834D3176029 /* Pods-PinrPrototypeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototypeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototypeUITests/Pods-PinrPrototypeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		48DFE8C48423DE319002F625 /* Pods-PinrPrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototypeUITests/Pods-PinrPrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		515E9320EC7063CE3E5C8A12 /* Pods-PinrPrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototypeTests/Pods-PinrPrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E63D61C1254B9420AFDD6FA /* Pods_PinrPrototypeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinrPrototypeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D38D0D674EF85A4C530EABF /* Pods_PinrPrototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinrPrototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A83CBEB333B8063F9E220F97 /* Pods-PinrPrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototype/Pods-PinrPrototype.release.xcconfig"; sourceTree = "<group>"; };
+		B96D053C7901E34171A2E6FB /* Pods-PinrPrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototypeTests/Pods-PinrPrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF4EDB0365B95F869426E9F9 /* Pods-PinrPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinrPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinrPrototype/Pods-PinrPrototype.debug.xcconfig"; sourceTree = "<group>"; };
+		E79F90742CF0FE37254A8C8F /* Pods_PinrPrototypeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinrPrototypeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1630BAFA1D95DE34000ABA93 /* FBSDKShareKit.framework in Frameworks */,
+				1630BAFE1D95DE49000ABA93 /* FBSDKCoreKit.framework in Frameworks */,
+				8B219588B1524FA030DAF189 /* Pods_PinrPrototype.framework in Frameworks */,
+				1630BAFC1D95DE40000ABA93 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D65C6F03029430FF26F4FF0 /* Pods_PinrPrototypeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +128,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222071BCEA96064DE2B1935D /* Pods_PinrPrototypeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1630BB001D96038A000ABA93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1630BB011D9603C9000ABA93 /* User.swift */,
+				16E92C821D963DDB0070811B /* Event.swift */,
+				16E92C841D96F5EF0070811B /* Attendance.swift */,
+				166F5F1A1D9DAF7D00B462E5 /* CustomMarkerData.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		16C2013C1D94AD6D00B9E48B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +153,8 @@
 				16C2015C1D94AD6D00B9E48B /* PinrPrototypeTests */,
 				16C201671D94AD6D00B9E48B /* PinrPrototypeUITests */,
 				16C201461D94AD6D00B9E48B /* Products */,
+				A4A6DFE2A8AD0E5622B94CE1 /* Pods */,
+				BCCD9822B1DEF389E6789D5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +171,28 @@
 		16C201471D94AD6D00B9E48B /* PinrPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				1630BB001D96038A000ABA93 /* Models */,
+				1630BAFF1D95F9BB000ABA93 /* PinrPrototype.entitlements */,
 				16C201481D94AD6D00B9E48B /* AppDelegate.swift */,
 				16C2014A1D94AD6D00B9E48B /* ViewController.swift */,
 				16C2014C1D94AD6D00B9E48B /* Main.storyboard */,
 				16C2014F1D94AD6D00B9E48B /* Assets.xcassets */,
 				16C201511D94AD6D00B9E48B /* LaunchScreen.storyboard */,
 				16C201541D94AD6D00B9E48B /* Info.plist */,
+				1630BAF31D95ADEF000ABA93 /* FeedViewController.swift */,
+				1630BAF51D95AED1000ABA93 /* AttendanceCell.swift */,
+				1630BAF71D95C43D000ABA93 /* MapViewController.swift */,
+				1630BB031D9610D3000ABA93 /* SettingsViewController.swift */,
+				1630BB051D961307000ABA93 /* CreateEventVC.swift */,
+				16BC6B491D9774B600BDD535 /* DatePickerVC.swift */,
+				16BC6B4B1D979A2F00BDD535 /* EventCell.swift */,
+				16BC6B4D1D979CB400BDD535 /* EventFeedVC.swift */,
+				16BC6B4F1D97A93600BDD535 /* File.swift */,
+				1651C0B31D981F6A003D578D /* SignInVC.swift */,
+				1651C0B51D9827D6003D578D /* SignUpVC.swift */,
+				16BCD46D1D9C1D1900EC0D3E /* EventDetailVC.swift */,
+				166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */,
+				166F5F181D9DA8FD00B462E5 /* CustomInfoWindow.swift */,
 			);
 			path = PinrPrototype;
 			sourceTree = "<group>";
@@ -125,6 +215,32 @@
 			path = PinrPrototypeUITests;
 			sourceTree = "<group>";
 		};
+		A4A6DFE2A8AD0E5622B94CE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF4EDB0365B95F869426E9F9 /* Pods-PinrPrototype.debug.xcconfig */,
+				A83CBEB333B8063F9E220F97 /* Pods-PinrPrototype.release.xcconfig */,
+				515E9320EC7063CE3E5C8A12 /* Pods-PinrPrototypeTests.debug.xcconfig */,
+				B96D053C7901E34171A2E6FB /* Pods-PinrPrototypeTests.release.xcconfig */,
+				48DFE8C48423DE319002F625 /* Pods-PinrPrototypeUITests.debug.xcconfig */,
+				27CE9FDAA0A93834D3176029 /* Pods-PinrPrototypeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCCD9822B1DEF389E6789D5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1630BAFD1D95DE49000ABA93 /* FBSDKCoreKit.framework */,
+				1630BAFB1D95DE40000ABA93 /* FBSDKLoginKit.framework */,
+				1630BAF91D95DE34000ABA93 /* FBSDKShareKit.framework */,
+				6D38D0D674EF85A4C530EABF /* Pods_PinrPrototype.framework */,
+				5E63D61C1254B9420AFDD6FA /* Pods_PinrPrototypeTests.framework */,
+				E79F90742CF0FE37254A8C8F /* Pods_PinrPrototypeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16C2016D1D94AD6D00B9E48B /* Build configuration list for PBXNativeTarget "PinrPrototype" */;
 			buildPhases = (
+				E98781A8087DF78E52F8DDBD /* [CP] Check Pods Manifest.lock */,
 				16C201411D94AD6D00B9E48B /* Sources */,
 				16C201421D94AD6D00B9E48B /* Frameworks */,
 				16C201431D94AD6D00B9E48B /* Resources */,
+				3FC7ECDBFCB1395092B82315 /* [CP] Embed Pods Frameworks */,
+				5237F0D9789AF6D9EFF6FE0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16C201701D94AD6D00B9E48B /* Build configuration list for PBXNativeTarget "PinrPrototypeTests" */;
 			buildPhases = (
+				F73E5567CC87969EFC8471EE /* [CP] Check Pods Manifest.lock */,
 				16C201551D94AD6D00B9E48B /* Sources */,
 				16C201561D94AD6D00B9E48B /* Frameworks */,
 				16C201571D94AD6D00B9E48B /* Resources */,
+				F8FDF4A13A4B1A6AC11F6428 /* [CP] Embed Pods Frameworks */,
+				0F5A491707805A23DF9BEC38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16C201731D94AD6D00B9E48B /* Build configuration list for PBXNativeTarget "PinrPrototypeUITests" */;
 			buildPhases = (
+				8393499B5A38F0D267855972 /* [CP] Check Pods Manifest.lock */,
 				16C201601D94AD6D00B9E48B /* Sources */,
 				16C201611D94AD6D00B9E48B /* Frameworks */,
 				16C201621D94AD6D00B9E48B /* Resources */,
+				17C10A286AE1EE495A92535E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +317,13 @@
 				TargetAttributes = {
 					16C201441D94AD6D00B9E48B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = W8LZ29733G;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					16C201581D94AD6D00B9E48B = {
 						CreatedOnToolsVersion = 8.0;
@@ -235,6 +365,7 @@
 				16C201531D94AD6D00B9E48B /* LaunchScreen.storyboard in Resources */,
 				16C201501D94AD6D00B9E48B /* Assets.xcassets in Resources */,
 				16C2014E1D94AD6D00B9E48B /* Main.storyboard in Resources */,
+				166F5F171D9DA57D00B462E5 /* EventMarkerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +385,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F5A491707805A23DF9BEC38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinrPrototypeTests/Pods-PinrPrototypeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17C10A286AE1EE495A92535E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinrPrototypeUITests/Pods-PinrPrototypeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC7ECDBFCB1395092B82315 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinrPrototype/Pods-PinrPrototype-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5237F0D9789AF6D9EFF6FE0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinrPrototype/Pods-PinrPrototype-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8393499B5A38F0D267855972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E98781A8087DF78E52F8DDBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F73E5567CC87969EFC8471EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8FDF4A13A4B1A6AC11F6428 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinrPrototypeTests/Pods-PinrPrototypeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16C201411D94AD6D00B9E48B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				16C2014B1D94AD6D00B9E48B /* ViewController.swift in Sources */,
+				16E92C831D963DDB0070811B /* Event.swift in Sources */,
+				1630BAF41D95ADEF000ABA93 /* FeedViewController.swift in Sources */,
+				1630BB041D9610D3000ABA93 /* SettingsViewController.swift in Sources */,
+				166F5F191D9DA8FD00B462E5 /* CustomInfoWindow.swift in Sources */,
+				16BC6B4C1D979A2F00BDD535 /* EventCell.swift in Sources */,
+				16E92C851D96F5EF0070811B /* Attendance.swift in Sources */,
+				1630BB021D9603C9000ABA93 /* User.swift in Sources */,
+				16BCD46E1D9C1D1900EC0D3E /* EventDetailVC.swift in Sources */,
+				16BC6B4A1D9774B600BDD535 /* DatePickerVC.swift in Sources */,
+				1651C0B61D9827D6003D578D /* SignUpVC.swift in Sources */,
+				1630BAF61D95AED1000ABA93 /* AttendanceCell.swift in Sources */,
+				16BC6B501D97A93600BDD535 /* File.swift in Sources */,
+				1630BB061D961307000ABA93 /* CreateEventVC.swift in Sources */,
+				1630BAF81D95C43D000ABA93 /* MapViewController.swift in Sources */,
+				16BC6B4E1D979CB400BDD535 /* EventFeedVC.swift in Sources */,
 				16C201491D94AD6D00B9E48B /* AppDelegate.swift in Sources */,
+				1651C0B41D981F6A003D578D /* SignInVC.swift in Sources */,
+				166F5F1B1D9DAF7D00B462E5 /* CustomMarkerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,9 +679,17 @@
 		};
 		16C2016E1D94AD6D00B9E48B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4EDB0365B95F869426E9F9 /* Pods-PinrPrototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PinrPrototype/PinrPrototype.entitlements;
+				DEVELOPMENT_TEAM = W8LZ29733G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PinrPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = na.PinrPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,9 +699,17 @@
 		};
 		16C2016F1D94AD6D00B9E48B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83CBEB333B8063F9E220F97 /* Pods-PinrPrototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PinrPrototype/PinrPrototype.entitlements;
+				DEVELOPMENT_TEAM = W8LZ29733G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PinrPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = na.PinrPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +719,7 @@
 		};
 		16C201711D94AD6D00B9E48B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 515E9320EC7063CE3E5C8A12 /* Pods-PinrPrototypeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +734,7 @@
 		};
 		16C201721D94AD6D00B9E48B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96D053C7901E34171A2E6FB /* Pods-PinrPrototypeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +749,7 @@
 		};
 		16C201741D94AD6D00B9E48B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48DFE8C48423DE319002F625 /* Pods-PinrPrototypeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PinrPrototypeUITests/Info.plist;
@@ -473,6 +763,7 @@
 		};
 		16C201751D94AD6D00B9E48B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CE9FDAA0A93834D3176029 /* Pods-PinrPrototypeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PinrPrototypeUITests/Info.plist;
@@ -503,6 +794,7 @@
 				16C2016F1D94AD6D00B9E48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16C201701D94AD6D00B9E48B /* Build configuration list for PBXNativeTarget "PinrPrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +803,7 @@
 				16C201721D94AD6D00B9E48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16C201731D94AD6D00B9E48B /* Build configuration list for PBXNativeTarget "PinrPrototypeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +812,7 @@
 				16C201751D94AD6D00B9E48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Parse
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +21,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        IQKeyboardManager.sharedManager().enable = true
+        GMSServices.provideAPIKey("AIzaSyBPeCF1K4c96MPv8x9JZHelnU6e_3Erlms")
+        GMSPlacesClient.provideAPIKey("AIzaSyA5gkSc0WLr74E9VmIk6bUbv38FlbDhb24")
+        
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "pinr"
+                configuration.clientKey = "asdfasdfasdf"
+                configuration.server = "https://stormy-coast-85212.herokuapp.com/parse"
+            })
+        )
+        
+        if PFUser.current() != nil {
+            //do something to instantiate tab bar thing
+        }
+        
+        
+        FBSDKLoginButton.classForCoder()
+        //return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
-
+    /*
+    private func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool
+    {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+    }
+*/
+    
+    func application(_ app: UIApplication, open url: URL, options: [String : AnyObject] = [:]) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String, annotation: options["UIApplicationOpenURLOptionsAnnotationKey"])
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
