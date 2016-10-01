@@ -14,6 +14,8 @@ class customMarkerData {
     var name: String?
     var location: String?
     var description: String?
+    var startTime: String?
+    var endTime: String?
     var type: String?
     var imageData: Data?
     init(event: PFObject) {
@@ -38,7 +40,13 @@ class customMarkerData {
                 self.type = "Event Type: Private"
             }
         }
+        if let start = event["startDate"] as? NSDate {
+            
+        }
         
+        if let end = event["endDate"] as? NSDate {
+            
+        }
         if let parseImage = event.value(forKey: "picture")! as? PFFile
         {
             print("this should be the PFFile", parseImage, "for event: ", event["name"] as? String)

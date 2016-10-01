@@ -13,6 +13,7 @@ class SignUpVC: UIViewController {
 
     @IBOutlet weak var usernameField: UITextView!
     @IBOutlet weak var passwordField: UITextView!
+    var profilePicture: UIImage = UIImage(named: "blueLogo.png")!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,8 +32,9 @@ class SignUpVC: UIViewController {
         // set user properties
         newUser.username = usernameField.text
         newUser.password = passwordField.text
-        
-        
+        if let imagePFFile = getPFFileFromImage(image: profilePicture) {
+            newUser.setObject(imagePFFile, forKey: "profilePicture")
+        }
         // call sign up function on the object
         newUser.signUpInBackground { (Bool, Error) in
             if let Error = Error {
@@ -44,6 +46,17 @@ class SignUpVC: UIViewController {
             }
         }
         
+    }
+    
+    func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        // check if image is not nil
+        if let image = image {
+            // get image data and check if that is not nil
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
     }
 
     /*

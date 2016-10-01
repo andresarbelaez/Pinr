@@ -10,7 +10,9 @@ import UIKit
 
 class CustomInfoWindow: UIView {
 
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hostLabel: UILabel!
     @IBOutlet weak var eventPictureView: UIImageView!
     
     // Only override draw() if you perform custom drawing.

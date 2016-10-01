@@ -16,6 +16,7 @@
 		1630BB021D9603C9000ABA93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB011D9603C9000ABA93 /* User.swift */; };
 		1630BB041D9610D3000ABA93 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB031D9610D3000ABA93 /* SettingsViewController.swift */; };
 		1630BB061D961307000ABA93 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1630BB051D961307000ABA93 /* CreateEventVC.swift */; };
+		164E88811D9EC5A00040FB4B /* ProfilePictureCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E88801D9EC5A00040FB4B /* ProfilePictureCollectionCell.swift */; };
 		1651C0B41D981F6A003D578D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651C0B31D981F6A003D578D /* SignInVC.swift */; };
 		1651C0B61D9827D6003D578D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651C0B51D9827D6003D578D /* SignUpVC.swift */; };
 		166F5F171D9DA57D00B462E5 /* EventMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */; };
@@ -68,6 +69,7 @@
 		1630BB011D9603C9000ABA93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1630BB031D9610D3000ABA93 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1630BB051D961307000ABA93 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		164E88801D9EC5A00040FB4B /* ProfilePictureCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureCollectionCell.swift; sourceTree = "<group>"; };
 		1651C0B31D981F6A003D578D /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		1651C0B51D9827D6003D578D /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventMarkerView.xib; sourceTree = "<group>"; };
@@ -146,6 +148,37 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		164E887D1D9EC2D90040FB4B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1630BAF51D95AED1000ABA93 /* AttendanceCell.swift */,
+				16BC6B4B1D979A2F00BDD535 /* EventCell.swift */,
+				164E88801D9EC5A00040FB4B /* ProfilePictureCollectionCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		164E887E1D9EC2FC0040FB4B /* Main Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				1630BAF31D95ADEF000ABA93 /* FeedViewController.swift */,
+				1630BAF71D95C43D000ABA93 /* MapViewController.swift */,
+				1630BB031D9610D3000ABA93 /* SettingsViewController.swift */,
+				16BC6B4D1D979CB400BDD535 /* EventFeedVC.swift */,
+			);
+			name = "Main Tabs";
+			sourceTree = "<group>";
+		};
+		164E887F1D9EC3360040FB4B /* Login Flow */ = {
+			isa = PBXGroup;
+			children = (
+				16C2014A1D94AD6D00B9E48B /* ViewController.swift */,
+				1651C0B31D981F6A003D578D /* SignInVC.swift */,
+				1651C0B51D9827D6003D578D /* SignUpVC.swift */,
+			);
+			name = "Login Flow";
+			sourceTree = "<group>";
+		};
 		16C2013C1D94AD6D00B9E48B = {
 			isa = PBXGroup;
 			children = (
@@ -171,25 +204,19 @@
 		16C201471D94AD6D00B9E48B /* PinrPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				164E887F1D9EC3360040FB4B /* Login Flow */,
+				164E887E1D9EC2FC0040FB4B /* Main Tabs */,
+				164E887D1D9EC2D90040FB4B /* Cells */,
 				1630BB001D96038A000ABA93 /* Models */,
 				1630BAFF1D95F9BB000ABA93 /* PinrPrototype.entitlements */,
 				16C201481D94AD6D00B9E48B /* AppDelegate.swift */,
-				16C2014A1D94AD6D00B9E48B /* ViewController.swift */,
 				16C2014C1D94AD6D00B9E48B /* Main.storyboard */,
 				16C2014F1D94AD6D00B9E48B /* Assets.xcassets */,
 				16C201511D94AD6D00B9E48B /* LaunchScreen.storyboard */,
 				16C201541D94AD6D00B9E48B /* Info.plist */,
-				1630BAF31D95ADEF000ABA93 /* FeedViewController.swift */,
-				1630BAF51D95AED1000ABA93 /* AttendanceCell.swift */,
-				1630BAF71D95C43D000ABA93 /* MapViewController.swift */,
-				1630BB031D9610D3000ABA93 /* SettingsViewController.swift */,
 				1630BB051D961307000ABA93 /* CreateEventVC.swift */,
 				16BC6B491D9774B600BDD535 /* DatePickerVC.swift */,
-				16BC6B4B1D979A2F00BDD535 /* EventCell.swift */,
-				16BC6B4D1D979CB400BDD535 /* EventFeedVC.swift */,
 				16BC6B4F1D97A93600BDD535 /* File.swift */,
-				1651C0B31D981F6A003D578D /* SignInVC.swift */,
-				1651C0B51D9827D6003D578D /* SignUpVC.swift */,
 				16BCD46D1D9C1D1900EC0D3E /* EventDetailVC.swift */,
 				166F5F161D9DA57D00B462E5 /* EventMarkerView.xib */,
 				166F5F181D9DA8FD00B462E5 /* CustomInfoWindow.swift */,
@@ -527,6 +554,7 @@
 				1630BAF61D95AED1000ABA93 /* AttendanceCell.swift in Sources */,
 				16BC6B501D97A93600BDD535 /* File.swift in Sources */,
 				1630BB061D961307000ABA93 /* CreateEventVC.swift in Sources */,
+				164E88811D9EC5A00040FB4B /* ProfilePictureCollectionCell.swift in Sources */,
 				1630BAF81D95C43D000ABA93 /* MapViewController.swift in Sources */,
 				16BC6B4E1D979CB400BDD535 /* EventFeedVC.swift in Sources */,
 				16C201491D94AD6D00B9E48B /* AppDelegate.swift in Sources */,

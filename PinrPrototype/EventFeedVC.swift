@@ -89,6 +89,11 @@ class EventFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let query = PFQuery(className: "Event")
         query.order(byDescending: "startDate")
         query.includeKey("username")
+        query.includeKey("User")
+        query.includeKey("_User")
+        query.includeKey("attending")
+        query.includeKey("username")
+        query.includeKey("profilePicture")
         let currentDate: NSDate = NSDate()
         
         let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
@@ -137,11 +142,6 @@ class EventFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             let indexPath = tableView.indexPath(for: cell)
             let event = events[(indexPath?.row)!]
             vc.event = event
-            
-            
-            
-            print()
-            print("2. assigning event: ", event["name"],  "to detailview")
             //vc.event = eventToBeDetailed
         }
         // Get the new view controller using segue.destinationViewController.

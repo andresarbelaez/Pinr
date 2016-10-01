@@ -47,7 +47,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let maxDate: Date = calendar.date(byAdding: components as DateComponents, to: currentDate as Date, options: NSCalendar.Options(rawValue: 0))!
         query.whereKey("startDate", lessThan: maxDate)
         query.whereKey("endDate", greaterThan: currentDate)
-        
+        query.includeKey("User")
+        query.includeKey("_User")
+        query.includeKey("attending")
+        query.includeKey("username")
+        query.includeKey("profilePicture")
         query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
             if error == nil {
                 print("Here are the events: ")
@@ -153,6 +157,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let customInfoWindow = Bundle.main.loadNibNamed("EventMarkerView", owner: self, options: nil)?.first as! CustomInfoWindow
         customInfoWindow.nameLabel.text = marker.title
+        //customInfoWindow.hostLabel.text =
         let markerData = marker.userData as! customMarkerData
         let imageData = markerData.imageData
         customInfoWindow.eventPictureView.image = UIImage(data: imageData!)

@@ -45,6 +45,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let query = PFQuery(className: "Attendance")
         query.includeKey("event")
         query.includeKey("attendee")
+        query.includeKey("User")
+        query.includeKey("_User")
+        query.includeKey("attending")
+        query.includeKey("username")
+        query.includeKey("profilePicture")
         query.findObjectsInBackground { (attendances: [PFObject]?, error: Error?) in
             if error == nil {
                 print("Here are the loaded attendances: ")
@@ -78,14 +83,52 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadData()
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "eventSegue" {
+            let vc = segue.destination as! EventDetailVC
+            let button = sender as! UIButton
+            let attendanceInstance = attendances[button.tag]
+            let eventt = attendanceInstance["event"] as! PFObject
+            let id = attendanceInstance.objectId
+            let query = PFQuery(className: "Attendance")
+            query.whereKey("event", equalTo: eventt)
+            query.includeKey("username")
+            query.includeKey("User")
+            query.includeKey("_User")
+            query.findObjectsInBackground(block: { (attendanceResults: [PFObject]?, error: Error?) in
+                if error == nil {
+                    let attendanceInQuestion = attendanceResults?.first
+                    let event = attendanceInQuestion?.object(forKey: "event") as! PFObject
+                    self.fetch(object: event)
+                    vc.event = event
+                    vc.viewDidLoad()
+                    let eventName = event["name"] as? String
+                    let otherEventName = vc.event?["name"] as? String
+                    print("eventName is this: ", eventName)
+                    print("otherEventName is this: ", otherEventName)
+                } else {
+                    print("error querying one attendance")
+                }
+            })
+            
+            
+            
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    func fetch(object: PFObject) {
+        do {
+            try object.fetchIfNeeded()
+        } catch {
+            print(error)
+        }
+    }
+    
 
 }

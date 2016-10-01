@@ -27,6 +27,17 @@ class AttendanceCell: UITableViewCell {
             }
             if let person = attendance!["attendee"] as? PFUser{
                 nameLabel.text = person.username
+                if let parseImage = person.value(forKeyPath: "profilePicture") as? PFFile {
+                    parseImage.getDataInBackground(block: { (data: Data?, error: Error?) in
+                        if (error == nil){
+                            self.picture.image = UIImage(data: data!)
+                        } else {
+                            print("couldn't get image data")
+                            print(error?.localizedDescription)
+                        }
+                        
+                    })
+                }
             }
             
             if let event = attendance?["event"] as? PFObject {
