@@ -16,6 +16,7 @@ class customMarkerData {
     var description: String?
     var startTime: String?
     var endTime: String?
+    var timeToShow: String?
     var type: String?
     var imageData: Data?
     init(event: PFObject) {
@@ -40,13 +41,26 @@ class customMarkerData {
                 self.type = "Event Type: Private"
             }
         }
-        if let start = event["startDate"] as? NSDate {
-            
-        }
         
         if let end = event["endDate"] as? NSDate {
-            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .full
+            self.timeToShow = ("ends in " + DateExtension.getTimeBetween(a: Date(), b: end as Date))
+            //self.timeToShow = "ending at " + dateFormatter.string(from: end as Date)
         }
+        
+        if let start = event["startDate"] as? NSDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .full
+            if start.timeIntervalSinceNow > 0 {
+                self.timeToShow = "starts in " + DateExtension.getTimeBetween(a: Date(), b: start as Date)
+                //self.timeToShow = "starting at" + dateFormatter.string(from: start as Date)
+            }
+        } else {
+            print("lalalalalala")
+        }
+        
+        
         if let parseImage = event.value(forKey: "picture")! as? PFFile
         {
             print("this should be the PFFile", parseImage, "for event: ", event["name"] as? String)

@@ -19,7 +19,7 @@ class EventDetailVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var dismissButton: UIButton!
-    var friendsGoing: [PFUser]?
+    var friendsGoing: [PFUser] = []
     var event: PFObject?
     var eventString: String?
     override func viewDidLoad() {
@@ -75,14 +75,17 @@ class EventDetailVC: UIViewController {
         }
         
         if let peopleGoing = event?.object(forKey: "attending") as? [PFUser] {
+            self.friendsGoing = peopleGoing
+            /*
             for personGoing in peopleGoing {
                 
                 //personGoing.fetchIfNeeded()
                 
                 print("see if I'm attending", personGoing.username!)
                 //friendsGoing?.append(personGoing)
-                friendsGoing?.append(personGoing as PFUser)
+                friendsGoing.append(personGoing as PFUser)
             }
+ */
             //for friend in friendsGoing! {
                 //print("friend: ", friend.username)
             //}
@@ -121,14 +124,14 @@ class EventDetailVC: UIViewController {
 
 extension EventDetailVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return self.friendsGoing.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfilePictureCollectionCell", for: indexPath) as! ProfilePictureCollectionCell
         
-        cell.user = friendsGoing?[indexPath.row]
-        print("Checking if friendsGoing is working:", friendsGoing?[indexPath.row].username)
+        cell.user = friendsGoing[indexPath.row]
+        print("Checking if friendsGoing is working:", friendsGoing[indexPath.row].username)
         
         //cell.profilePicture.image = UIImage(named: "logo")
         if indexPath.row == 3 {

@@ -40,6 +40,12 @@ class AttendanceCell: UITableViewCell {
                 }
             }
             
+            if let createdAt = attendance?.createdAt{
+                self.timeLabel.text = (DateExtension.getTimeBetween(a: Date(), b: createdAt as Date))
+            } else {
+                print("lalalalalala")
+            }
+            
             if let event = attendance?["event"] as? PFObject {
                 eventButton.setTitle(event["name"] as? String, for: .normal)
                 print("eventName should be:", event["name"] as? String)

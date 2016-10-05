@@ -50,6 +50,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 parseImage.getDataInBackground(block: { (data: Data?, error: Error?) in
                     if (error == nil){
                         self.profilePicView.image = UIImage(data: data!)
+                        self.profilePicView.layer.cornerRadius = self.profilePicView.frame.size.width / 2
+                        self.profilePicView.clipsToBounds = true
+                        self.profilePicView.layer.borderColor = UIColor.darkGray.cgColor
+                        self.profilePicView.layer.borderWidth = 3
                     } else {
                         print("couldn't get image data")
                         print(error?.localizedDescription)
@@ -106,6 +110,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         PFUser.logOutInBackground { (Error) in
             // PFUser.currentUser() will now be nil
             print("user has logged out")
+            self.performSegue(withIdentifier: "backToLogin", sender: nil)
         }
     }
     
@@ -135,6 +140,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
         // Do something with the images (based on your use case)
+        self.profilePicView.image = editedImage
         let userProfile = userToShow
         userProfile?["profilePicture"] = Event.getPFFileFromImage(image: editedImage)
         userProfile?.saveInBackground(block: { (success: Bool, error: Error?) in
@@ -152,14 +158,48 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "profileToEventSegue" {
+            let vc = segue.destination as! EventDetailVC
+            let button = sender as! UIButton
+            let attendanceInstance = attendances[button.tag]
+            let eventt = attendanceInstance["event"] as! PFObject
+            let id = attendanceInstance.objectId
+            let query = PFQuery(className: "Attendance")
+            query.whereKey("event", equalTo: eventt)
+            query.includeKey("username")
+            query.includeKey("User")
+            query.includeKey("_User")
+            query.findObjectsInBackground(block: { (attendanceResults: [PFObject]?, error: Error?) in
+                if error == nil {
+                    let attendanceInQuestion = attendanceResults?.first
+                    let event = attendanceInQuestion?.object(forKey: "event") as! PFObject
+                    self.fetch(object: event)
+                    vc.event = event
+                    vc.viewDidLoad()
+                    let eventName = event["name"] as? String
+                    let otherEventName = vc.event?["name"] as? String
+                    print("eventName is this: ", eventName)
+                    print("otherEventName is this: ", otherEventName)
+                } else {
+                    print("error querying one attendance")
+                }
+            })
+            
+            
+            
+        }
     }
-    */
-
+    
+    func fetch(object: PFObject) {
+        do {
+            try object.fetchIfNeeded()
+        } catch {
+            print(error)
+        }
+    }
 }

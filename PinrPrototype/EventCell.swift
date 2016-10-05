@@ -15,6 +15,7 @@ class EventCell: UITableViewCell, GMSMapViewDelegate {
     @IBOutlet weak var eventPic: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var timeToShow: UILabel!
     
     let geocoder: GMSGeocoder? = nil
     
@@ -40,6 +41,26 @@ class EventCell: UITableViewCell, GMSMapViewDelegate {
 
                 })
             }
+            
+            
+            if let end = event?["endDate"] as? NSDate {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .full
+                self.timeToShow.text = ("ends in " + DateExtension.getTimeBetween(a: Date(), b: end as Date))
+                //self.timeToShow = "ending at " + dateFormatter.string(from: end as Date)
+            }
+            
+            if let start = event?["startDate"] as? NSDate {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .full
+                if start.timeIntervalSinceNow > 0 {
+                    self.timeToShow.text = "starts in " + DateExtension.getTimeBetween(a: Date(), b: start as Date)
+                    //self.timeToShow = "starting at" + dateFormatter.string(from: start as Date)
+                }
+            } else {
+                print("lalalalalala")
+            }
+            
             
             nameLabel.text = event?["name"] as? String
             

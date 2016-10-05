@@ -33,6 +33,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func loadData(){
+        mapView.clear()
         let query = PFQuery(className: "Event")
         query.includeKey("username")
         let currentDate: NSDate = NSDate()
@@ -88,6 +89,66 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
+    func loadTomorrowData(){
+        mapView.clear()
+        let query = PFQuery(className: "Event")
+        query.includeKey("username")
+        let currentDate: NSDate = NSDate()
+        
+        let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        
+        
+        
+        let components: NSDateComponents = NSDateComponents()
+        components.calendar = calendar as Calendar
+        components.day = 1
+        let minDate: Date = calendar.date(byAdding: components as DateComponents, to: currentDate as Date, options: NSCalendar.Options(rawValue: 0))!
+        components.day = 2
+        let maxDate: Date = calendar.date(byAdding: components as DateComponents, to: currentDate as Date, options: NSCalendar.Options(rawValue: 0))!
+        query.whereKey("startDate", lessThan: maxDate)
+        query.whereKey("endDate", greaterThan: minDate)
+        query.includeKey("User")
+        query.includeKey("_User")
+        query.includeKey("attending")
+        query.includeKey("username")
+        query.includeKey("profilePicture")
+        query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
+            if error == nil {
+                print("Here are tomorrow's events: ")
+                if let events = events {
+                    for event in events {
+                        let location = event["locationCoordinates"] as! [Double]
+                        let locationCoordinates = CLLocationCoordinate2DMake(location[0] , location[1])
+                        let eventMarker = GMSMarker()
+                        let customData = customMarkerData(event: event)
+                        eventMarker.userData = customData
+                        eventMarker.title = event["name"] as! String?
+                        eventMarker.icon = UIImage(named: "blackLogo.png")
+                        eventMarker.position = locationCoordinates
+                        self.getAddress(coordinate: locationCoordinates, completion: { (address) in
+                            if let locationName = event["locationName"] as? String {
+                                if locationName == "" {
+                                    print("address should be: ", address)
+                                    eventMarker.snippet = address
+                                } else {
+                                    eventMarker.snippet = locationName + ": " + address
+                                }
+                            }
+                            
+                        })
+                        
+                        eventMarker.map = self.mapView
+                        eventMarker.icon = UIImage(named: "blueLogo.png")
+                        
+                    }
+                }
+            } else {
+                print("error querying events")
+            }
+        }
+    }
+
+    
     override func viewWillAppear(_ animated: Bool) {
         /*
         // Create a GMSCameraPosition that tells the map to display the
@@ -118,6 +179,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         london.map = mapView
         */
         
+    }
+    @IBAction func onLoadTomorrow(_ sender: AnyObject) {
+        loadTomorrowData()
+    }
+    @IBAction func onLoadToday(_ sender: AnyObject) {
+        loadData()
     }
     
     @IBAction func getCurrentPlace(_ sender: AnyObject) {
@@ -156,10 +223,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     //Customizes the infoMarker of each respective marker.
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let customInfoWindow = Bundle.main.loadNibNamed("EventMarkerView", owner: self, options: nil)?.first as! CustomInfoWindow
-        customInfoWindow.nameLabel.text = marker.title
+        
         //customInfoWindow.hostLabel.text =
         let markerData = marker.userData as! customMarkerData
         let imageData = markerData.imageData
+        customInfoWindow.nameLabel.text = markerData.name
+        customInfoWindow.dateLabel.text = markerData.timeToShow
         customInfoWindow.eventPictureView.image = UIImage(data: imageData!)
         
         return customInfoWindow

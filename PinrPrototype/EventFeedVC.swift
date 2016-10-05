@@ -56,6 +56,16 @@ class EventFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     print("error: ", error?.localizedDescription)
                 }
             })
+            
+            cell.event?.add(currentUser!, forKey: "attending")
+            /*
+            cell.event?.saveInBackground(block: { (success: Bool, error: Error?) in
+                if success {
+                    print("success. Added attendee to event")
+                } else {
+                    print("error adding attendee to event")
+                }
+            }) */
         }
         return cell
     }

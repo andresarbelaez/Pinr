@@ -50,6 +50,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.includeKey("attending")
         query.includeKey("username")
         query.includeKey("profilePicture")
+        query.order(byDescending: "_created_at")
         query.findObjectsInBackground { (attendances: [PFObject]?, error: Error?) in
             if error == nil {
                 print("Here are the loaded attendances: ")
